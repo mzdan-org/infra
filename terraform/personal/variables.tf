@@ -34,5 +34,4 @@ variable "vm_password" {
 variable "vm_ssh_pubkey" {
   description = "The SSH public key for the VM"
   type        = string
-  sensitive   = true
 }

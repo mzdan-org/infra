@@ -1,0 +1,7 @@
+#cloud-config
+packages:
+  - qemu-guest-agent
+power_state:
+  delay: now
+  mode: reboot
+  message: Rebooting machine
