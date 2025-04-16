@@ -15,7 +15,7 @@ resource "proxmox_virtual_environment_vm" "terraform001" {
     floating  = 2048
   }
   cpu {
-    cores = 2
+    cores = 3
     type  = "x86-64-v2-AES" # the "x86-64-v2-AES" is also a good choice (or choose "kvm64" as common safe choice)
     units = 100
   }
