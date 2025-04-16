@@ -19,6 +19,10 @@ resource "proxmox_virtual_environment_vm" "terraform001" {
     type  = "x86-64-v2-AES" # the "x86-64-v2-AES" is also a good choice (or choose "kvm64" as common safe choice)
     units = 100
   }
+  # it adds memory of 16mg automatically as default
+  vga {
+    type = "serial0"
+  }
   # it adds aio=io_uring,backup=true,cache=none,replicate=true automatically as default
   disk {
     #NOTE: when resizeing, the vm will rebooted and resized automatically by cloud-init

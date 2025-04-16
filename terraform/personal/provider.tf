@@ -5,8 +5,8 @@ provider "proxmox" {
 
   ssh {
     agent       = false
-    private_key = file(var.proxmox_node_privkey_path)
     username    = var.proxmox_node_ssh_user
+    private_key = file(var.proxmox_node_privkey_path)
   }
   random_vm_ids = true
 }
