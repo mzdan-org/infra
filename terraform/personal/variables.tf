@@ -1,28 +1,7 @@
-variable "endpoint" {
-  description = "Proxmox endpoint"
-  type        = string
-}
-
-variable "username" {
-  description = "Proxmox username"
-  type        = string
-}
-
-variable "password" {
-  description = "Proxmox password"
+variable "proxmox_node_privkey" {
+  description = "Proxmox node private key as base64 encoded string"
   type        = string
   sensitive   = true
-}
-
-variable "proxmox_node_privkey_path" {
-  description = "Proxmox node private key path"
-  type        = string
-}
-
-variable "proxmox_node_ssh_user" {
-  description = "The ssh user used for connection to proxmox node"
-  type        = string
-  default     = "root"
 }
 
 variable "vm_password" {

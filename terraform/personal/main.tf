@@ -42,7 +42,7 @@ resource "proxmox_virtual_environment_vm" "terraform001" {
     datastore_id = data.proxmox_virtual_environment_datastores.prox10_datastore_vms.datastores[0].id
     user_account {
       password = var.vm_password
-      keys     = [trimspace(file(var.vm_ssh_pubkey))]
+      keys     = [var.vm_ssh_pubkey]
     }
     ip_config {
       ipv4 {
