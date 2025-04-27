@@ -11,8 +11,8 @@ resource "proxmox_virtual_environment_vm" "terraform001" {
   on_boot = true
 
   memory {
-    dedicated = 2048
-    floating  = 2048
+    dedicated = 4096
+    floating  = 4096
   }
   cpu {
     cores = 3
